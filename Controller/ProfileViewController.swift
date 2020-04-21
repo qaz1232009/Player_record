@@ -8,13 +8,17 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, URLSessionDelegate {
     //UI Test Value
     
-    var user_name:String! = "SEELE"
-    var user_rate:String! = "0.00"
-    var user_count:String! = "2"
+    var user_name:String!
+    var user_rate:String!
+    var user_count:String!
     var music:User_Recent!
+    
+    var userDataUrl = URL(string:"http://welcome-collin.asuscomm.com:3000/query?table=cm_user_data&card=07BC024F7788AC65")
+    var url = "http://welcome-collin.asuscomm.com:3000/query?table=cm_user_data&card=07BC024F7788AC65"
+    
     @IBOutlet var name_lab: UILabel!
     @IBOutlet var rate_lab: UILabel!
     @IBOutlet var count_lab: UILabel!
@@ -31,15 +35,49 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        // Do any additional setup after loading the view.
         super.viewDidLoad()
+        getUserData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         name_lab.text = user_name
         rate_lab.text = user_rate
         count_lab.text = user_count
-        self.savaCoreData()
     }
     
-
+    //getdata
+    func getUserData() {
+        let urlStr = "http://welcome-collin.asuscomm.com:3000/query?table=cm_user_data&card=07BC024F7788AC65"
+        if let url = URL(string: urlStr) {
+            URLSession.shared.dataTask(with: url) { (data, response , error) in
+                let decoder = JSONDecoder()
+                if let data = data, let userData = try?
+                   decoder.decode([UserData].self, from: data){
+                    print(userData[0])
+                    print(userData[0].user_name)
+                    for user in userData{
+                        self.user_name = user.user_name
+                        print(self.user_name!)
+                        self.user_rate = user.player_rating
+                        self.user_count = user.play_count
+                    }
+                    
+                }
+                else {
+                    print("error")
+                }
+            }.resume()
+        }
+    }
+    
+    //json struct
+    struct UserData: Decodable {
+        var user_name: String
+        var player_rating: String
+        var play_count: String
+    }
+    
     /*
     // MARK: - Navigation
 

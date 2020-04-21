@@ -10,6 +10,7 @@ import CoreData
 import UIKit
 
 class RecentTableViewController: UITableViewController,NSFetchedResultsControllerDelegate{
+
     
     static var tbView: UITableView!
     var player_recent_data:[User_Recent] = []

@@ -168,6 +168,13 @@
                                                 <constraint firstItem="WH6-SG-jme" firstAttribute="leading" secondItem="vRj-7y-XXG" secondAttribute="leading" id="xj6-Xd-ejh"/>
                                             </constraints>
                                         </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2L-Gp-fZB">
+                                            <rect key="frame" x="268" y="97" width="98" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="vRj-7y-XXG" firstAttribute="top" secondItem="iIN-uq-pfU" secondAttribute="top" constant="10" id="B3L-So-zOd"/>
@@ -180,6 +187,7 @@
                                     <outlet property="music_name_Label" destination="hz9-ay-MS6" id="x4H-sB-MDm"/>
                                     <outlet property="rank_Label" destination="WH6-SG-jme" id="dHj-Fe-SNF"/>
                                     <outlet property="score_Label" destination="0mQ-TQ-kxC" id="U7l-jh-Dg6"/>
+                                    <outlet property="time_Label" destination="y2L-Gp-fZB" id="WAP-av-6zo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -192,7 +200,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RzH-fN-ZGR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246" y="995"/>
+            <point key="canvasLocation" x="244.92753623188409" y="994.56521739130437"/>
         </scene>
     </scenes>
     <resources>

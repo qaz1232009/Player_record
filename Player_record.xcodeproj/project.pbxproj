@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F002B89824500656009982EA /* music_name.json in Resources */ = {isa = PBXBuildFile; fileRef = F002B89724500656009982EA /* music_name.json */; };
+		F002B89924500656009982EA /* music_name.json in Resources */ = {isa = PBXBuildFile; fileRef = F002B89724500656009982EA /* music_name.json */; };
+		F002B89A24500656009982EA /* music_name.json in Resources */ = {isa = PBXBuildFile; fileRef = F002B89724500656009982EA /* music_name.json */; };
 		F04A871F244EB77800774124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04A871E244EB77800774124 /* AppDelegate.swift */; };
 		F04A8721244EB77800774124 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04A8720244EB77800774124 /* SceneDelegate.swift */; };
 		F04A8726244EB77800774124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F04A8724244EB77800774124 /* Main.storyboard */; };
@@ -38,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F002B89724500656009982EA /* music_name.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = music_name.json; sourceTree = "<group>"; };
 		F04A871B244EB77800774124 /* Player_record.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Player_record.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04A871E244EB77800774124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F04A8720244EB77800774124 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +90,7 @@
 		F04A8712244EB77800774124 = {
 			isa = PBXGroup;
 			children = (
-				F0F50227244EDCCE000381A1 /* CoreData */,
+				F0F50227244EDCCE000381A1 /* Data */,
 				F04A874F244EC4EE00774124 /* TableCell */,
 				F04A874E244EC4D100774124 /* Controller */,
 				F04A871D244EB77800774124 /* Player_record */,
@@ -163,12 +167,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F0F50227244EDCCE000381A1 /* CoreData */ = {
+		F0F50227244EDCCE000381A1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				F002B89724500656009982EA /* music_name.json */,
 				F0F50220244EDA06000381A1 /* Model.xcdatamodeld */,
 			);
-			path = CoreData;
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F002B89824500656009982EA /* music_name.json in Resources */,
 				F04A872B244EB77D00774124 /* LaunchScreen.storyboard in Resources */,
 				F04A8728244EB77D00774124 /* Assets.xcassets in Resources */,
 				F04A8726244EB77800774124 /* Main.storyboard in Resources */,
@@ -285,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F002B89924500656009982EA /* music_name.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F002B89A24500656009982EA /* music_name.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

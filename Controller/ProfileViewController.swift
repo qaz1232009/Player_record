@@ -14,7 +14,6 @@ class ProfileViewController: UIViewController, URLSessionDelegate {
     var user_name:String!
     var user_rate:String!
     var user_count:String!
-    var music:User_Recent!
     
     var userDataUrl = URL(string:"http://welcome-collin.asuscomm.com:3000/query?table=cm_user_data&card=07BC024F7788AC65")
     var url = "http://welcome-collin.asuscomm.com:3000/query?table=cm_user_data&card=07BC024F7788AC65"
@@ -23,16 +22,6 @@ class ProfileViewController: UIViewController, URLSessionDelegate {
     @IBOutlet var rate_lab: UILabel!
     @IBOutlet var count_lab: UILabel!
     
-    func savaCoreData(){
-        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
-            music = User_Recent(context: appDelegate.persistentContainer.viewContext)
-            music.name = "B.B.B"
-            music.level = "EXH"
-            music.rank = "S"
-            music.score = "10000000"
-            appDelegate.saveContext()
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

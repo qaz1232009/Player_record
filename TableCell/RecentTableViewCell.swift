@@ -29,6 +29,11 @@ class RecentTableViewCell: UITableViewCell {
             score_Label.numberOfLines = 0
         }
     }
+    @IBOutlet var time_Label: UILabel! {
+        didSet {
+            score_Label.numberOfLines = 0
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
